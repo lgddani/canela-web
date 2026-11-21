@@ -1,0 +1,159 @@
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 52px;
+}
+
+.filtro {
+  padding: 11px 22px;
+  border-radius: 999px;
+  border: 2px solid var(--pergamino-oscuro);
+  background: transparent;
+  color: var(--cafe-700);
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.filtro:hover {
+  border-color: var(--canela);
+  color: var(--canela);
+}
+
+.filtro.activo {
+  background: var(--cafe-900);
+  border-color: var(--cafe-900);
+  color: var(--oro);
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ===== CARTA ===== */
+.carta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.carta-seccion {
+  background: var(--crema);
+  border-radius: var(--radio-lg);
+  padding: 36px 38px;
+  box-shadow: var(--sombra);
+  border: 1px solid var(--pergamino-oscuro);
+}
+
+.carta-seccion h3 {
+  font-size: 1.7rem;
+  color: var(--canela);
+  font-style: italic;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px dashed var(--pergamino-oscuro);
+}
+
+.carta-seccion ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.carta-seccion li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 1.02rem;
+}
+
+.carta-puntos {
+  flex: 1;
+  border-bottom: 2px dotted rgba(85, 51, 31, 0.3);
+  transform: translateY(-4px);
+  min-width: 20px;
+}
+
+.carta-seccion strong {
+  font-family: var(--font-display);
+  color: var(--cafe-900);
+}
+
+/* ===== CTA PEDIDO ===== */
+.pedido-cta {
+  background: var(--cafe-900);
+  color: var(--crema);
+  padding: 80px 0;
+  background-image: radial-gradient(circle at 100% 0%, rgba(244, 181, 30, 0.18), transparent 40%);
+}
+
+.pedido-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.pedido-inner .script {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  color: var(--oro);
+}
+
+.pedido-inner h2 {
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  margin: 4px 0 10px;
+}
+
+.pedido-inner p {
+  color: rgba(251, 245, 234, 0.75);
+}
+
+.pedido-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 960px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pedido-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .productos-grid,
+  .carta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filtros {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    margin: 0 -18px 40px;
+    padding: 0 18px 6px;
+    scrollbar-width: none;
+  }
+
+  .filtro {
+    flex-shrink: 0;
+  }
+
+  .carta-seccion {
+    padding: 28px 22px;
+  }
+
+  .pedido-btns .btn {
+    flex: 1 1 100%;
+  }
+}

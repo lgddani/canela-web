@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GitHub Pages SPA redirect hack -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+
+    <!-- SEO -->
+    <title>Canela ECU 593 · Bar Restaurante Ecuatoriano en Newark, NJ</title>
+    <meta name="description" content="Canela ECU 593: auténtica comida ecuatoriana en Newark, New Jersey. Encebollado, bandera, guatita, ceviches, churrasco y micheladas. 54 Vincent St, dentro de La Conga. ¡Aquí se cocina con amor!" />
+    <meta name="keywords" content="restaurante ecuatoriano, comida ecuatoriana Newark, Ironbound, encebollado, ceviche, bandera, guatita, churrasco, Canela ECU 593, New Jersey" />
+    <meta name="author" content="Canela ECU 593" />
+    <meta name="theme-color" content="#2a1810" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Canela ECU 593 · Con sabor a Ecuador" />
+    <meta property="og:description" content="Bar restaurante ecuatoriano en Newark, NJ. Aquí se cocina con amor." />
+    <meta property="og:image" content="https://lgddani.github.io/canela/og-image.jpg" />
+    <meta property="og:locale" content="es_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Geo -->
+    <meta name="geo.region" content="US-NJ" />
+    <meta name="geo.placename" content="Newark, New Jersey" />
+    <meta name="geo.position" content="40.7305266;-74.1369578" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/iziToast.min.css">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Canela ECU 593",
+      "servesCuisine": "Ecuadorian",
+      "telephone": "+1-862-346-0512",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "54 Vincent St",
+        "addressLocality": "Newark",
+        "addressRegion": "NJ",
+        "postalCode": "07105",
+        "addressCountry": "US"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 40.7305266, "longitude": -74.1369578 },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "28" },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "10:00",
+          "closes": "02:00"
+        }
+      ],
+      "sameAs": ["https://www.tiktok.com/@canelaecu593"]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="/iziToast.min.js"></script>
+    <script src="/fontawesome.js" data-auto-replace-svg="nest"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
