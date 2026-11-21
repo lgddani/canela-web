@@ -9,12 +9,12 @@ Páginas: **Inicio · Menú (productos) · Quiénes Somos · Contacto**.
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173/canela/
+npm run dev        # http://localhost:5173/canela-web/
 ```
 
 ## Publicar en GitHub Pages
 
-1. Crea un repo en GitHub llamado **`canela`** (si usas otro nombre, cámbialo en `vite.config.ts` → `REPO`).
+1. Crea un repo en GitHub llamado **`canela-web`** (si usas otro nombre, cámbialo en `vite.config.ts` → `REPO`).
 2. Inicializa y sube:
 
 ```bash
@@ -22,13 +22,15 @@ git init
 git add .
 git commit -m "Web Canela ECU 593"
 git branch -M main
-git remote add origin https://github.com/<TU_USUARIO>/canela.git
+git remote add origin https://github.com/<TU_USUARIO>/canela-web.git
 git push -u origin main
 npm run deploy     # build + publica /dist en la rama gh-pages
 ```
 
-3. En GitHub → Settings → Pages → Branch: `gh-pages` / root.
-4. Queda en `https://<TU_USUARIO>.github.io/canela/`.
+3. **Opción recomendada (automática):** en GitHub → Settings → Pages → Source: **GitHub Actions**.
+   El workflow `.github/workflows/deploy.yml` compila y publica en cada push (no hace falta `npm run deploy`).
+   **Opción manual:** `npm run deploy` y en Settings → Pages → Branch: `gh-pages` / root.
+4. Queda en `https://<TU_USUARIO>.github.io/canela-web/`.
 
 > Si tu usuario no es `lgddani`, cambia también la URL de `og:image` en `index.html`.
 
